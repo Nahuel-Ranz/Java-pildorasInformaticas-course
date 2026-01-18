@@ -79,7 +79,7 @@ class CalculatorPannel extends JPanel {
 	
 	private class InsertNumber implements ActionListener {
 		@Override
-		public void actionPerformed(ActionEvent e) {
+		public void actionPerformed(ActionEvent e) {IO.println("to throw to thrash");
 			String entered = e.getActionCommand();
 			
 			switch(entered) {
