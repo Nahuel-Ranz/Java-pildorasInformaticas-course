@@ -47,7 +47,7 @@ class CalculatorPannel extends JPanel {
 	private String previousNumber = "";
 	private boolean isNewNumber = true;
 	private String currentOperation = "";
-	private String []operators = "+-*/^%".split("");
+	private String []printable = "0.123456789".split("");
 	private String dt;
 	
 	public CalculatorPannel() {
@@ -71,10 +71,16 @@ class CalculatorPannel extends JPanel {
 			Arrays.stream(row).forEach(digit -> {
 				
 				JButton btn = new JButton(digit);
-				btn.addActionListener(new InsertNumber());
+				if(contains(printable, digit)) btn.addActionListener(new InsertNumber());
+				else btn.addActionListener(new Operator());
 				this.buttons.add(btn);
 			});
 		});
+	}
+	
+	private static boolean contains(String []strings, String string) {
+		for(String o: strings) { if(o.equals(string)) return true;}
+		return false;
 	}
 	
 	private class InsertNumber implements ActionListener {
@@ -82,7 +88,39 @@ class CalculatorPannel extends JPanel {
 		public void actionPerformed(ActionEvent e) {
 			String entered = e.getActionCommand();
 			
+			if(entered.equals(".")) {
+				
+				if(!dt.contains(".")) {
+					if(isNewNumber) display.setText(dt = "0.");
+					else display.setText(dt += ".");
+				}
+			} else if((dt.length() == 1 && dt.equals("0")) || isNewNumber) {
+				
+				display.setText(dt = entered);
+			} else {
+				display.setText(dt = dt.concat(entered));
+			}
+			
+			isNewNumber = false;
+			if(currentOperation.equals("=")) {
+				previousNumber = "";
+				currentOperation = "";
+			}
+		}
+	}
+	
+	private class Operator implements ActionListener {
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			String entered = e.getActionCommand();
+			
 			switch(entered) {
+				case "+": toOperate("+"); break;
+				case "-": toOperate("-"); break;
+				case "*": toOperate("*"); break;
+				case "/": toOperate("/"); break;
+				case "%": toOperate("%"); break;
+				case "^": toOperate("^"); break;
 				case "<":
 					if(dt.length() == 1) display.setText(dt = "0");
 					else display.setText(dt = dt.substring(0, dt.length()-1));
@@ -107,37 +145,7 @@ class CalculatorPannel extends JPanel {
 						isNewNumber = true;
 					}
 					break;
-				case "+": toOperate("+"); break;
-				case "-": toOperate("-"); break;
-				case "*": toOperate("*"); break;
-				case "/": toOperate("/"); break;
-				case "%": toOperate("%"); break;
-				case "^": toOperate("^"); break;
-				default:
-					if(entered.equals(".")) {
-						
-						if(!dt.contains(".")) {
-							if(isNewNumber) display.setText(dt = "0.");
-							else display.setText(dt += ".");
-						}
-					} else if((dt.length() == 1 && dt.equals("0")) || isNewNumber) {
-						
-						display.setText(dt = entered);
-					} else {
-						display.setText(dt = dt.concat(entered));
-					}
-					
-					isNewNumber = false;
-					if(currentOperation.equals("=")) {
-						previousNumber = "";
-						currentOperation = "";
-					}
 			}
-		}
-		
-		private static boolean contains(Object []objects, Object obj) {
-			for(Object o: objects) { if(o.equals(obj)) return true;}
-			return false;
 		}
 		
 		private static String toInteger(String number) {
