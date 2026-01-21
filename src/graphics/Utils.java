@@ -28,4 +28,26 @@ public class Utils {
 		String []fonts = getLocalGraphicsEnvironment().getAvailableFontFamilyNames();
 		Arrays.stream(fonts).forEach(font -> println(font));
 	}
+	
+	public static String[] getFonts() {
+		return getLocalGraphicsEnvironment().getAvailableFontFamilyNames();
+	}
+	
+	public static String[] getMonths() {
+		return new String[]{
+			"January",
+			"February",
+			"March",
+			"April",
+			"May",
+			"June",
+			"July",
+			"August",
+			"September",
+			"October",
+			"November",
+			"December"
+		};
+	}
+	
 }
