@@ -16,6 +16,8 @@ public class TextArea1 {
 }
 
 class TAFrame extends JFrame {
+	private static final long serialVersionUID = 1L;
+	
 	public TAFrame() {
 		super.setBounds(300, 300, 500, 300);
 		super.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -25,6 +27,8 @@ class TAFrame extends JFrame {
 }
 
 class TAPannel extends JPanel {
+	private static final long serialVersionUID = 1L;
+	
 	private JTextArea ta;
 	private JScrollPane scrollPannel;
 	private JButton btn;

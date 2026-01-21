@@ -13,6 +13,8 @@ public class MultipleListeners {
 }
 
 class MLFrame extends JFrame {
+	private static final long serialVersionUID = 1L;
+	
 	public MLFrame() {
 		setBounds(50, 50, 350, 200);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -22,6 +24,8 @@ class MLFrame extends JFrame {
 }
 
 class MLPannel extends JPanel {
+	private static final long serialVersionUID = 1L;
+	
 	private JButton newJB;
 	private JButton closeAll;
 	
@@ -45,6 +49,8 @@ class MLPannel extends JPanel {
 }
 
 class PopUp extends JFrame {
+	private static final long serialVersionUID = 1L;
+	
 	private static int id = 1;
 	
 	public PopUp(JButton closeWindow) {

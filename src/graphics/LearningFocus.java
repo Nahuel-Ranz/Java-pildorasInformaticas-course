@@ -6,16 +6,16 @@ import java.awt.event.FocusListener;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import static graphics.Utils.println;
 
 public class LearningFocus {
 	public static void main(String []args) {
-		var frame = new FFrame();
-		frame.setVisible(true);
+		new FFrame().setVisible(true);
 	}
 }
 
 class FFrame extends JFrame {
+	private static final long serialVersionUID = 1L;
+	
 	public FFrame() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(600, 300);
@@ -25,6 +25,7 @@ class FFrame extends JFrame {
 }
 
 class FPannel extends JPanel {
+	private static final long serialVersionUID = 1L;
 	
 	private JTextField textField1;
 	private JTextField textField2;

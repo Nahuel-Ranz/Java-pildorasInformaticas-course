@@ -4,11 +4,12 @@ import javax.swing.*;
 public class CreateFrame {
 
 	public static void main(String []args) {
-		MyFrame frame1 = new MyFrame();
+		new MyFrame();
 	}
 }
 
 class MyFrame extends JFrame {
+	private static final long serialVersionUID = 1L;
 	
 	public MyFrame() {
 		// setSize(500, 300);

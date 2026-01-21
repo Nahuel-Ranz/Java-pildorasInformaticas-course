@@ -10,12 +10,14 @@ import javax.swing.JPanel;
 public class LoadImages {
 
 	public static void main(String []args) {
-		IFrame frame = new IFrame(600);
-		IFrame f = new IFrame(400);
+		new IFrame(600).setVisible(true);
+		new IFrame(400).setVisible(true);
 	}
 }
 
 class IFrame extends JFrame {
+	private static final long serialVersionUID = 1L;
+	
 	private int side;
 	private IPannel pannel;
 	
@@ -28,11 +30,12 @@ class IFrame extends JFrame {
 		
 		this.pannel = new IPannel();
 		add(pannel);
-		setVisible(true);
 	}
 }
 
 class IPannel extends JPanel {
+	private static final long serialVersionUID = 1L;
+	
 	private Image img;
 	private int x; // image width
 	private int y; // image height

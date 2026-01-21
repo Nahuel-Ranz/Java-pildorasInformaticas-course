@@ -1,6 +1,6 @@
 package graphics;
 import java.awt.BorderLayout;
-import java.awt.Color;
+//import java.awt.Color;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -17,6 +17,8 @@ public class LearningTextField {
 }
 
 class TFrame extends JFrame {
+	private static final long serialVersionUID = 1L;
+	
 	public TFrame() {
 		setBounds(100, 40, 600, 300);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -26,6 +28,8 @@ class TFrame extends JFrame {
 }
 
 class TPannel extends JPanel {
+	private static final long serialVersionUID = 1L;
+	
 	private JPanel pannel;
 	private JTextField field1;
 	private JButton btn;

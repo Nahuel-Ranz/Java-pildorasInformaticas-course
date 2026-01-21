@@ -15,6 +15,8 @@ public class TextArea2 {
 }
 
 class TAFrame2 extends JFrame {
+	private static final long serialVersionUID = 1L;
+	
 	private JPanel btnPannel;
 	private JButton enterBtn, breakRowBtn;
 	private JTextArea textArea;

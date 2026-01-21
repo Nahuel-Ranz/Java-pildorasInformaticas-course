@@ -17,6 +17,8 @@ public class Calculator1 {
 }
 
 class CalculatorFrame extends JFrame {
+	private static final long serialVersionUID = 1L;
+	
 	public CalculatorFrame() {
 		var screen= getDefaultToolkit().getScreenSize();
 		int width = (int)screen.getWidth();
@@ -34,6 +36,7 @@ class CalculatorFrame extends JFrame {
 }
 
 class CalculatorPannel extends JPanel {
+	private static final long serialVersionUID = 1L;
 	
 	private JButton display;
 	private JPanel buttons;

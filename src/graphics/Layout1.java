@@ -12,6 +12,8 @@ public class Layout1 {
 }
 
 class Layout1Frame extends JFrame {
+	private static final long serialVersionUID = 1L;
+	
 	public Layout1Frame() {
 		setBounds(30, 30, 500, 500);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -22,6 +24,8 @@ class Layout1Frame extends JFrame {
 }
 
 class Layout1Pannel extends JPanel {
+	private static final long serialVersionUID = 1L;
+	
 	public Layout1Pannel() {
 		// super.setLayout(new FlowLayout(FlowLayout.RIGHT, 20, 5));
 		super.setLayout(new FlowLayout(FlowLayout.LEFT));
@@ -31,6 +35,8 @@ class Layout1Pannel extends JPanel {
 }
 
 class Layout2Pannel extends JPanel {
+	private static final long serialVersionUID = 1L;
+	
 	public Layout2Pannel() {
 		super.setLayout(new BorderLayout(30, 5));
 		super.add(new JButton("Red"), BorderLayout.WEST);

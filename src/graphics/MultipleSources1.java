@@ -20,6 +20,7 @@ public class MultipleSources1 {
 }
 
 class MSFrame extends JFrame {
+	private static final long serialVersionUID = 1L;
 	
 	public MSFrame() {
 		setBounds(30, 30, 700, 500);
@@ -31,6 +32,8 @@ class MSFrame extends JFrame {
 }
 
 class MSPannel extends JPanel {
+	private static final long serialVersionUID = 1L;
+	
 	private JButton btnYellow;
 	private JButton btnBlue;
 	private JButton btnRed;
@@ -88,6 +91,8 @@ class MSPannel extends JPanel {
 }
 
 class BackColor extends AbstractAction {
+	private static final long serialVersionUID = 1L;
+	
 	private MSPannel pannel;
 	private JButton btn;
 	

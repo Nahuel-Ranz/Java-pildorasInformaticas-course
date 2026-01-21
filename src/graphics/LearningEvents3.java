@@ -3,7 +3,6 @@ package graphics;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowListener;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
 import static graphics.Utils.println;
 
 public class LearningEvents3 {
@@ -23,16 +22,14 @@ public class LearningEvents3 {
 }
 
 class WFrame extends JFrame {
+	private static final long serialVersionUID = 1L;
+	
 	public WFrame() {
 		setSize(500, 300);
 		setLocation(100, 100);
 		
 		addWindowListener(new FWindow());
 	}
-}
-
-class WPannel extends JPanel {
-	
 }
 
 class FWindow implements WindowListener {

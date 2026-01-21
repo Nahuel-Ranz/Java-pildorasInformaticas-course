@@ -3,7 +3,6 @@ package graphics;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import javax.swing.JFrame;
-import static graphics.Utils.println;
 
 public class LearningEvents4 {
 	
@@ -22,6 +21,8 @@ public class LearningEvents4 {
 }
 
 class WindowFrame extends JFrame {
+	private static final long serialVersionUID = 1L;
+	
 	public WindowFrame() {
 		setSize(500, 300);
 		setLocation(100, 100);

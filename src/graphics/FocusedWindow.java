@@ -4,6 +4,8 @@ import java.awt.event.WindowFocusListener;
 import javax.swing.JFrame;
 
 public class FocusedWindow extends JFrame implements WindowFocusListener {
+	private static final long serialVersionUID = 1L;
+	
 	private FocusedWindow window1;
 	private FocusedWindow window2;
 	

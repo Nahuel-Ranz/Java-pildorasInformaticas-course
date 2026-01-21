@@ -13,6 +13,7 @@ public class FrameEvents {
 }
 
 class EvFrame extends JFrame {
+	private static final long serialVersionUID = 1L;
 	
 	public EvFrame() {		
 		setSize(500, 500);

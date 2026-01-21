@@ -4,7 +4,7 @@ import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.SystemColor;
+//import java.awt.SystemColor;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 import java.awt.geom.Rectangle2D;
@@ -16,11 +16,13 @@ import static graphics.Utils.centrate;
 
 public class Drawing {
 	public static void main(String []args) {
-		DFrame frame = new DFrame();
+		new DFrame();
 	}
 }
 
 class DFrame extends JFrame {
+	private static final long serialVersionUID = 1L;
+	
 	
 	private int width;
 	private int height;
@@ -47,6 +49,7 @@ class DFrame extends JFrame {
 }
 
 class DPannel extends JPanel {
+	private static final long serialVersionUID = 1L;
 	
 	@Override
 	public void paintComponent(Graphics g) {

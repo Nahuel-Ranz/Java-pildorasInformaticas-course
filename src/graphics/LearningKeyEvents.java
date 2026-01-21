@@ -6,12 +6,12 @@ import static graphics.Utils.println;
 
 public class LearningKeyEvents {
 	public static void main(String []args) {
-		var frame = new KEFrame();
-		frame.setVisible(true);
+		new KEFrame().setVisible(true);
 	}
 }
 
 class KEFrame extends JFrame {
+	private static final long serialVersionUID = 1L;
 	
 	public KEFrame() {
 		setBounds(50, 50, 500, 500);

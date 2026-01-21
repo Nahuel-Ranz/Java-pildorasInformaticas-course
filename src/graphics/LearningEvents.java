@@ -8,11 +8,13 @@ import javax.swing.JPanel;
 
 public class LearningEvents {
 	public static void main(String []args) {
-		EFrame frame = new EFrame();
+		new EFrame().setVisible(true);
 	}
 }
 
 class EFrame extends JFrame {
+	private static final long serialVersionUID = 1L;
+	
 	private EPannel pannel;
 	
 	public EFrame() {
@@ -22,11 +24,12 @@ class EFrame extends JFrame {
 		setTitle("Learning about java events");
 		setBounds(50, 50, 500, 500);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setVisible(true);
 	}
 }
 
 class EPannel extends JPanel implements ActionListener {
+	private static final long serialVersionUID = 1L;
+	
 	private JButton blue;
 	private JButton yellow;
 	private JButton red;

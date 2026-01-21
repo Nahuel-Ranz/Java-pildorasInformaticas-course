@@ -19,6 +19,8 @@ public class FirstLogin {
 }
 
 class LoginFrame extends JFrame {
+	private static final long serialVersionUID = 1L;
+	
 	public LoginFrame() {
 		setBounds(30, 30, 400, 120);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -28,6 +30,8 @@ class LoginFrame extends JFrame {
 }
 
 class LoginPannel extends JPanel {
+	private static final long serialVersionUID = 1L;
+	
 	private JPanel mainPannel;
 	private JLabel userLabel;
 	private JTextField userField;
@@ -41,9 +45,13 @@ class LoginPannel extends JPanel {
 		this.mainPannel = new JPanel();
 		this.mainPannel.setLayout(new GridLayout(2, 2, 3, 3));
 		
-		this.mainPannel.add(this.userLabel = new JLabel("User: "));
-		this.mainPannel.add(this.userField = new JTextField(20));
-		this.mainPannel.add(this.passwordLabel = new JLabel("Password: "));
+		this.userLabel = new JLabel("User: ");
+		this.userField = new JTextField(20);
+		this.passwordLabel = new JLabel("Password: ");
+		
+		this.mainPannel.add(this.userLabel);
+		this.mainPannel.add(this.userField);
+		this.mainPannel.add(this.passwordLabel);
 		this.mainPannel.add(this.passwordField = new JPasswordField(20));
 		this.doc = this.passwordField.getDocument();
 		this.doc.addDocumentListener(new CheckPassword());
@@ -65,6 +73,7 @@ class LoginPannel extends JPanel {
 		@Override
 		public void changedUpdate(DocumentEvent e) {}
 		
+		@SuppressWarnings("deprecation")
 		private void updateFieldState() {
 			if(!passwordField.getText().matches("^.{8,12}$"))
 				passwordField.setBackground(Color.RED);

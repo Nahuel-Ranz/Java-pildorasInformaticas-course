@@ -2,20 +2,17 @@ package graphics;
 import java.awt.Dimension;
 import java.awt.Image;
 import javax.swing.JFrame;
-
 import static java.awt.Toolkit.getDefaultToolkit;
-
-import static graphics.Utils.println;
-import static graphics.Utils.className;
 import static graphics.Utils.centrate;
 
 public class CreateCenteredFrame {
 	public static void main(String []args) {
-		var cf = new CenteredFrame();
+		new CenteredFrame();
 	}
 }
 
 class CenteredFrame extends JFrame {
+	private static final long serialVersionUID = 1L;
 	
 	public CenteredFrame() {
 		var tk = getDefaultToolkit();

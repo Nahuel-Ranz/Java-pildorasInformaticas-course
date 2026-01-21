@@ -13,6 +13,8 @@ public class LearningTextFieldsDocuments {
 }
 
 class FrameWithDocument extends JFrame {
+	private static final long serialVersionUID = 1L;
+	
 	public FrameWithDocument() {
 		setBounds(50, 30, 500, 300);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -22,6 +24,8 @@ class FrameWithDocument extends JFrame {
 }
 
 class PannelWithDocument extends JPanel {
+	private static final long serialVersionUID = 1L;
+	
 	private JTextField field;
 	private Document doc;
 	

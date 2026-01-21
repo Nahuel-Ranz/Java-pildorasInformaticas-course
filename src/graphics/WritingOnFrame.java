@@ -6,16 +6,16 @@ import javax.swing.JPanel;
 public class WritingOnFrame {
 	
 	public static void main(String []args) {
-		Frame frame = new Frame();
+		new Frame().setVisible(true);
 	}
 }
 
 class Frame extends JFrame {
+	private static final long serialVersionUID = 1L;
 	
 	private Pannel pannel;
 	
 	public Frame() {
-		setVisible(true);
 		setBounds(400, 200, 600, 450);
 		setTitle("My first frame with pannels");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -26,6 +26,7 @@ class Frame extends JFrame {
 }
 
 class Pannel extends JPanel {
+	private static final long serialVersionUID = 1L;
 	
 	@Override
 	public void paintComponent(Graphics g) {

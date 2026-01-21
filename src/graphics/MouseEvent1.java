@@ -1,22 +1,23 @@
 package graphics;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
+//import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import javax.swing.JFrame;
 import static graphics.Utils.println;
 
 public class MouseEvent1 {
 	public static void main(String []args) {		
-		var frame = new MFrame();
+		new MFrame().setVisible(true);
 	}
 }
 
 class MFrame extends JFrame {
+	private static final long serialVersionUID = 1L;
+	
 	public MFrame() {
 		setBounds(50, 50, 500, 500);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setVisible(true);
 		
 		addMouseListener(new MouseEventos());
 		addMouseMotionListener(new DragMoveMouse()); 
