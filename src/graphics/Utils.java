@@ -1,8 +1,16 @@
 package graphics;
+import java.awt.Font;
 import java.util.Arrays;
+import javax.swing.JMenu;
+import javax.swing.JMenuBar;
+import javax.swing.JMenuItem;
 import static java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment;
 
+
 public class Utils {
+	static JMenuItem aux;
+	static Object[] fonts = {"Arial", Font.PLAIN, 15};
+	static int i = 0;
 
 	public static String className(Object o) {
 		return o.getClass().getSimpleName();
@@ -50,4 +58,11 @@ public class Utils {
 		};
 	}
 	
+	public static void addMenusToBar(JMenuBar bar, JMenu... menus) {
+		Arrays.stream(menus).forEach( menu -> bar.add(menu));
+	}
+	
+	public static void addItemsToMenu(JMenu menu, JMenuItem... items) {
+		Arrays.stream(items).forEach( item -> menu.add(item));
+	}
 }
