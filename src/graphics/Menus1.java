@@ -1,6 +1,7 @@
 package graphics;
 import java.util.Arrays;
 
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
@@ -53,9 +54,9 @@ class MenuPannel extends JPanel {
 		
 		this.save = new JMenuItem("Save");
 		this.saveAs = new JMenuItem("Save As ...");
-		this.cut = new JMenuItem("Cut");
-		this.copy = new JMenuItem("Copy");
-		this.paste = new JMenuItem("Paste");
+		this.cut = new JMenuItem("Cut", new ImageIcon(getClass().getResource("/images/cut.png")));
+		this.copy = new JMenuItem("Copy", new ImageIcon(getClass().getResource("/images/copy.png")));
+		this.paste = new JMenuItem("Paste", new ImageIcon(getClass().getResource("/images/paste.png")));
 		this.generals = new JMenuItem("Generals");
 		this.rock = new JMenuItem("Rock");
 		this.pop = new JMenuItem("Pop");
